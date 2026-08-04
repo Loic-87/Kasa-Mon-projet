@@ -1,4 +1,4 @@
-function Housing() {
+function Logement() {
   return (
     <main>
       <h1>Fiche logement</h1>
@@ -6,4 +6,4 @@ function Housing() {
   )
 }
 
-export default Housing
+export default Logement
