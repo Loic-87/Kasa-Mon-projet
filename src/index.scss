@@ -1,0 +1,24 @@
+// --- Variables Sass ---
+$color-primary: #ff6060;
+$max-width: 1240px;
+
+// --- Reset de base ---
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// --- Styles globaux ---
+body {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+// --- Conteneur principal (le "cadre" de l'app) ---
+#root {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 20px;
+}
