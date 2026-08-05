@@ -1,0 +1,9 @@
+// Point de rupture mobile → desktop
+$breakpoint-desktop: 768px;
+
+// Mixin : applique les styles passés à partir de la largeur desktop
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}

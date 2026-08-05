@@ -1,9 +1,20 @@
+@use '../../styles/breakpoints' as *;
+
 .gallery {
+  // mobile : 1 colonne, espacements réduits
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  padding: 50px;
-  margin-top: 40px;
-  background-color: #f7f7f7;
-  border-radius: 25px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
+
+  // desktop : 3 colonnes, espacements plus larges
+  @include desktop {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    padding: 50px;
+    margin-top: 40px;
+    background-color: #f7f7f7;
+    border-radius: 25px;
+  }
 }

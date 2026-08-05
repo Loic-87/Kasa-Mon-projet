@@ -1,12 +1,24 @@
+@use '../../styles/breakpoints' as *;
+
 .banner {
+  // mobile
   position: relative;
-  height: 223px;
-  border-radius: 25px;
+  height: 111px;
+  border-radius: 10px;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: 0 16px;
   margin-top: 20px;
+
+  // desktop : bannière plus haute + coins plus arrondis
+  @include desktop {
+    height: 223px;
+    border-radius: 25px;
+    justify-content: center;
+    padding: 0;
+  }
 
   &-image {
     position: absolute;
@@ -19,9 +31,16 @@
   }
 
   &-title {
+    // mobile
     position: relative;
     color: #ffffff;
-    font-size: 48px;
-    text-align: center;
+    font-size: 18px;
+    text-align: left;
+
+    // desktop : titre plus grand
+    @include desktop {
+      font-size: 48px;
+      text-align: center;
+    }
   }
 }
