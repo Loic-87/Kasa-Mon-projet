@@ -1,8 +1,17 @@
+@use '../../styles/breakpoints' as *;
+
 .card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
   position: relative;
-  height: 340px;
+  height: 255px;
   border-radius: 10px;
   overflow: hidden;
+
+  @include desktop {
+    height: 340px;
+  }
 
   &-image {
     width: 100%;
