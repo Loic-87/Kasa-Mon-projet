@@ -1,11 +1,22 @@
+import Banner from '../../components/Banner'
 import Collapse from '../../components/Collapse'
+import { aboutList } from '../../data/about'
+import bannerAbout from '../../assets/banner-about.webp'
+import './About.scss'
 
 function About() {
   return (
     <main>
-      <h1>À propos</h1>
-      <Collapse title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale." />
-      <Collapse title="Equipements" content="Wi-Fi, cuisine équipée, télévision." />
+      <Banner image={bannerAbout} />
+      <div className="about-collapses">
+        {aboutList.map((item) => (
+          <Collapse
+            key={item.title}
+            title={item.title}
+            content={item.content}
+          />
+        ))}
+      </div>
     </main>
   )
 }

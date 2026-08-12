@@ -1,7 +1,7 @@
 import logements from '../../data/logements.json'
 import Card from '../../components/Card'
 import Banner from '../../components/Banner'
-import bannerHome from '../../assets/banner-home.jpg'
+import bannerHome from '../../assets/banner-home.webp'
 import './Home.scss'
 
 function Home() {
