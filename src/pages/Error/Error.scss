@@ -1,0 +1,46 @@
+@use '../../styles/breakpoints' as *;
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 113px;
+
+  @include desktop {
+    gap: 139px;
+  }
+
+  &-title {
+    color: #ff6060;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 1;
+
+    @include desktop {
+      font-size: 288px;
+    }
+  }
+
+  &-message {
+    color: #ff6060;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include desktop {
+      font-size: 36px;
+    }
+  }
+
+  &-link {
+    color: #000000;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: underline;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+}
