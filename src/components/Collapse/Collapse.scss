@@ -1,26 +1,44 @@
-.collapse {
-  margin-bottom: 25px;
+@use '../../styles/breakpoints' as *;
 
+.collapse {
   &-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 30px;
+    padding: 0 20px;
     background-color: #ff6060;
     color: #ffffff;
-    padding: 12px 20px;
     border-radius: 5px;
     cursor: pointer;
+
+    @include desktop {
+      height: 52px;
+    }
   }
 
   &-title {
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 700;
+
+    @include desktop {
+      font-size: 24px;
+    }
   }
 
   &-arrow {
-    font-size: 28px;
-    line-height: 1;
+    display: flex;
+    width: 16px;
     transition: transform 0.3s ease;
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
+    @include desktop {
+      width: 24px;
+    }
   }
 
   &-arrow.open {
