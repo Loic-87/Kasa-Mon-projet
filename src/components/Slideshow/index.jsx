@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import './Gallery.scss'
+import './Slideshow.scss'
 
-function Gallery({ pictures }) {
+function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0)
 
   const goPrevious = () => {
@@ -13,22 +13,23 @@ function Gallery({ pictures }) {
   }
 
   return (
-    <div className="gallery">
+    <div className="slideshow">
       <img
+        key={index}
         src={pictures[index]}
         alt={`Logement ${index + 1}`}
-        className="gallery-image"
+        className="slideshow-image"
       />
 
       {pictures.length > 1 && (
         <>
-          <button className="gallery-arrow gallery-arrow--left" onClick={goPrevious}>
+          <button className="slideshow-arrow slideshow-arrow--left" onClick={goPrevious}>
             ‹
           </button>
-          <button className="gallery-arrow gallery-arrow--right" onClick={goNext}>
+          <button className="slideshow-arrow slideshow-arrow--right" onClick={goNext}>
             ›
           </button>
-          <span className="gallery-counter">
+          <span className="slideshow-counter">
             {index + 1}/{pictures.length}
           </span>
         </>
@@ -37,4 +38,4 @@ function Gallery({ pictures }) {
   )
 }
 
-export default Gallery
+export default Slideshow

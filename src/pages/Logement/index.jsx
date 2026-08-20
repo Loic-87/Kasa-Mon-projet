@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
-import Gallery from '../../components/Gallery'
+import Slideshow from '../../components/Slideshow'
 import { getLogementById } from '../../services/logements'
 import './Logement.scss'
 
@@ -26,7 +26,7 @@ function Logement() {
 
   return (
     <section className="logement">
-      <Gallery pictures={logement.pictures} />
+      <Slideshow pictures={logement.pictures} />
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
     </section>
