@@ -1,6 +1,7 @@
 @use '../../styles/breakpoints' as *;
 
 .error {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;

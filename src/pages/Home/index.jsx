@@ -13,7 +13,7 @@ function Home() {
   }, [])
 
   return (
-    <main>
+    <>
       <Banner image={bannerHome} title="Chez vous, partout et ailleurs" />
       <section className="gallery">
         {logements.map((logement) => (
@@ -25,7 +25,7 @@ function Home() {
           />
         ))}
       </section>
-    </main>
+    </>
   )
 }
 

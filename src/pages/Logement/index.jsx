@@ -25,11 +25,11 @@ function Logement() {
   }
 
   return (
-    <main className="logement">
+    <section className="logement">
       <Gallery pictures={logement.pictures} />
       <h1>{logement.title}</h1>
       <p>{logement.location}</p>
-    </main>
+    </section>
   )
 }
 

@@ -6,7 +6,7 @@ import './About.scss'
 
 function About() {
   return (
-    <main>
+    <>
       <Banner image={bannerAbout} />
       <div className="about-collapses">
         {aboutList.map((item) => (
@@ -17,7 +17,7 @@ function About() {
           />
         ))}
       </div>
-    </main>
+    </>
   )
 }
 
