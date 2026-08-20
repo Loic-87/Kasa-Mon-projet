@@ -1,1 +1,115 @@
 @use '../../styles/breakpoints' as *;
+
+.logement {
+  &-header {
+    margin-top: 20px;
+
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 30px;
+    }
+  }
+
+  &-title {
+    color: #ff6060;
+    font-weight: 500;
+    font-size: 18px;
+
+    @include desktop {
+      font-size: 36px;
+    }
+  }
+
+  &-location {
+    color: #ff6060;
+    font-size: 14px;
+
+    @include desktop {
+      font-size: 18px;
+    }
+  }
+
+  &-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+  }
+
+  &-tag {
+    background-color: #ff6060;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 5px 20px;
+    font-size: 10px;
+
+    @include desktop {
+      font-size: 14px;
+      padding: 6px 30px;
+    }
+  }
+
+  &-side {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    @include desktop {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 25px;
+      margin-top: 0;
+    }
+  }
+
+  &-host {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-name {
+      color: #ff6060;
+      font-size: 12px;
+      text-align: right;
+
+      @include desktop {
+        font-size: 18px;
+      }
+    }
+
+    &-picture {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+
+      @include desktop {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  &-collapses {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+
+    @include desktop {
+      flex-direction: row;
+      gap: 76px;
+      margin-top: 30px;
+
+      > * {
+        flex: 1;
+      }
+    }
+  }
+}
