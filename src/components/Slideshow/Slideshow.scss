@@ -1,4 +1,4 @@
-@use '../../styles/breakpoints' as *;
+@use "../../styles/breakpoints" as *;
 
 .slideshow {
   position: relative;
@@ -22,22 +22,37 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    display: flex;
+    padding: 0;
     background: none;
     border: none;
-    color: #ffffff;
-    font-size: 40px;
     cursor: pointer;
+
+    svg {
+      width: 30px;
+      height: auto;
+    }
 
     &--left {
       left: 15px;
+
+      svg {
+        transform: rotate(-90deg);
+      }
     }
 
     &--right {
       right: 15px;
+
+      svg {
+        transform: rotate(90deg);
+      }
     }
 
     @include desktop {
-      font-size: 80px;
+      svg {
+        width: 46px;
+      }
     }
   }
 
