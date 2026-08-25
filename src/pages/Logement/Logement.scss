@@ -16,6 +16,7 @@
     color: #ff6060;
     font-weight: 500;
     font-size: 18px;
+    line-height: 1.43;
 
     @include desktop {
       font-size: 36px;
@@ -26,6 +27,7 @@
     color: #ff6060;
     font-size: 14px;
     font-weight: 500;
+    line-height: 1.43;
 
     @include desktop {
       font-size: 18px;

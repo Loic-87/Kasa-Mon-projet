@@ -4,6 +4,10 @@
   display: flex;
   gap: 5px;
 
+  @include desktop {
+    gap: 11px;
+  }
+
   &-star {
     color: #e3e3e3;
     font-size: 18px;
