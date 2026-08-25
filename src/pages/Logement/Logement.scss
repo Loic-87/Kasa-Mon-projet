@@ -1,4 +1,4 @@
-@use '../../styles/breakpoints' as *;
+@use "../../styles/breakpoints" as *;
 
 .logement {
   &-header {
@@ -25,6 +25,7 @@
   &-location {
     color: #ff6060;
     font-size: 14px;
+    font-weight: 500;
 
     @include desktop {
       font-size: 18px;
@@ -46,6 +47,7 @@
     border-radius: 10px;
     padding: 5px 20px;
     font-size: 10px;
+    font-weight: 700;
 
     @include desktop {
       font-size: 14px;
@@ -76,6 +78,7 @@
     &-name {
       color: #ff6060;
       font-size: 12px;
+      font-weight: 500;
       text-align: right;
 
       @include desktop {
