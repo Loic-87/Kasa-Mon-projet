@@ -1,12 +1,13 @@
-import Banner from '../../components/Banner'
-import Collapse from '../../components/Collapse'
-import { aboutList } from '../../data/about'
-import bannerAbout from '../../assets/banner-about.webp'
-import './About.scss'
+import Banner from "../../components/Banner";
+import Collapse from "../../components/Collapse";
+import { aboutList } from "../../data/about";
+import bannerAbout from "../../assets/banner-about.webp";
+import "./About.scss";
 
 function About() {
   return (
     <>
+      <h1 className="visually-hidden">A propos</h1>
       <Banner image={bannerAbout} />
       <div className="about-collapses">
         {aboutList.map((item) => (
@@ -18,7 +19,7 @@ function About() {
         ))}
       </div>
     </>
-  )
+  );
 }
 
-export default About
+export default About;

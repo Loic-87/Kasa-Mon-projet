@@ -11,14 +11,14 @@ $max-width: 1280px;
 
 // --- Styles globaux ---
 body {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   background-color: #ffffff;
   color: #000000;
 }
 
 // --- Conteneur principal (le "cadre" de l'app) ---
 #root {
-   min-height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -31,4 +31,16 @@ main {
   padding: 20px;
   display: flex;
   flex-direction: column;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
