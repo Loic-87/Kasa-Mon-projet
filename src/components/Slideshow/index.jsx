@@ -3,13 +3,14 @@ import "./Slideshow.scss";
 
 function Slideshow({ pictures }) {
   const [index, setIndex] = useState(0);
+  const lastIndex = pictures.length - 1;
 
   const goPrevious = () => {
-    setIndex(index === 0 ? pictures.length - 1 : index - 1);
+    setIndex(index === 0 ? lastIndex : index - 1);
   };
 
   const goNext = () => {
-    setIndex(index === pictures.length - 1 ? 0 : index + 1);
+    setIndex(index === lastIndex ? 0 : index + 1);
   };
 
   return (
