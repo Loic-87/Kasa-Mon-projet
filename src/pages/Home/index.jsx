@@ -10,6 +10,7 @@ function Home() {
 
   useEffect(() => {
     getLogements().then((data) => setLogements(data))
+    .catch((error) => console.error("Erreur lors du chargement des logements:", error))
   }, [])
 
   return (

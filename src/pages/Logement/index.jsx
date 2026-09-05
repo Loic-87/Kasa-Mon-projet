@@ -16,6 +16,10 @@ function Logement() {
       setLogement(data)
       setLoading(false)
     })
+    .catch((error) => {
+      console.error("Erreur lors du chargement du logement:", error)
+      setLoading(false)
+    })
   }, [id])
 
   if (loading) {
