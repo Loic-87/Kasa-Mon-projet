@@ -1,27 +1,14 @@
-import { useState, useEffect } from 'react'
 import { useParams, Navigate } from 'react-router-dom'
 import Slideshow from '../../components/Slideshow'
 import Collapse from '../../components/Collapse'
 import Rating from '../../components/Rating'
-import { getLogementById } from '../../services/logements'
+import { useLogement } from '../../hooks/useLogement'
 import './Logement.scss'
 
 function Logement() {
   const { id } = useParams()
-  const [logement, setLogement] = useState(null)
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    getLogementById(id).then((data) => {
-      setLogement(data)
-      setLoading(false)
-    })
-    .catch((error) => {
-      console.error("Erreur lors du chargement du logement:", error)
-      setLoading(false)
-    })
-  }, [id])
-
+  const { logement, loading } = useLogement(id)
+  
   if (loading) {
     return null
   }

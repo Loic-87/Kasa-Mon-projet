@@ -1,17 +1,11 @@
-import { useState, useEffect } from 'react'
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
-import { getLogements } from '../../services/logements'
+import { useLogements } from '../../hooks/useLogements'
 import bannerHome from '../../assets/Banners/banner-home.webp'
 import './Home.scss'
 
 function Home() {
-  const [logements, setLogements] = useState([])
-
-  useEffect(() => {
-    getLogements().then((data) => setLogements(data))
-    .catch((error) => console.error("Erreur lors du chargement des logements:", error))
-  }, [])
+  const { logements } = useLogements()
 
   return (
     <>
