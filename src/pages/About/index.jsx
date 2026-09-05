@@ -1,7 +1,7 @@
 import Banner from "../../components/Banner";
 import Collapse from "../../components/Collapse";
 import { aboutList } from "../../data/about";
-import bannerAbout from "../../assets/banner-about.webp";
+import bannerAbout from "../../assets/Banners/banner-about.webp";
 import "./About.scss";
 
 function About() {

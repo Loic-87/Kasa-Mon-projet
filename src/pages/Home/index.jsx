@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Banner from '../../components/Banner'
 import Card from '../../components/Card'
 import { getLogements } from '../../services/logements'
-import bannerHome from '../../assets/banner-home.webp'
+import bannerHome from '../../assets/Banners/banner-home.webp'
 import './Home.scss'
 
 function Home() {
