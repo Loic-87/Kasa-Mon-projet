@@ -33,7 +33,6 @@ function Slideshow({ pictures }) {
             <svg
               viewBox="0 0 14 8"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M1 7L7 1L13 7"
@@ -54,7 +53,6 @@ function Slideshow({ pictures }) {
             <svg
               viewBox="0 0 14 8"
               fill="none"
-              xmlns="http://www.w3.org/2000/svg"
             >
               <path
                 d="M1 7L7 1L13 7"
