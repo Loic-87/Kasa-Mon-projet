@@ -10,7 +10,7 @@ function Logement() {
   const { logement, loading } = useLogement(id)
   
   if (loading) {
-    return null
+    return <p className="logement-status">Chargement...</p>
   }
 
   if (!logement) {
