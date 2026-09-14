@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ChevronIcon from "../ChevronIcon";
 import "./Slideshow.scss";
 
 function Slideshow({ pictures }) {
@@ -30,18 +31,7 @@ function Slideshow({ pictures }) {
             onClick={goPrevious}
             aria-label="Image precedente"
           >
-            <svg
-              viewBox="0 0 14 8"
-              fill="none"
-            >
-              <path
-                d="M1 7L7 1L13 7"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <ChevronIcon />
           </button>
 
           <button
@@ -50,18 +40,7 @@ function Slideshow({ pictures }) {
             onClick={goNext}
             aria-label="Image suivante"
           >
-            <svg
-              viewBox="0 0 14 8"
-              fill="none"
-            >
-              <path
-                d="M1 7L7 1L13 7"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+            <ChevronIcon />
           </button>
 
           <span className="slideshow-counter">
