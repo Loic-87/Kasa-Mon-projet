@@ -7,12 +7,17 @@ function Collapse({ title, content }) {
 
   return (
     <div className="collapse">
-      <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
+      <button
+        type="button"
+        className="collapse-header"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+      >
         <span className="collapse-title">{title}</span>
         <span className={`collapse-arrow ${isOpen ? "open" : ""}`}>
           <ChevronIcon />
         </span>
-      </div>
+      </button>
       <div className={`collapse-content ${isOpen ? "open" : ""}`}>
         <div className="collapse-content-inner">{content}</div>
       </div>
