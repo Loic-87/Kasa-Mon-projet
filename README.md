@@ -1,16 +1,78 @@
-# React + Vite
+# Kasa
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Application web d'une agence de location immobilière entre particuliers, réalisée dans le cadre de la formation **Développeur d'application JavaScript React** d'OpenClassrooms.
 
-Currently, two official plugins are available:
+Il s'agit d'une refonte du site en **React** : une Single Page Application (SPA) qui affiche une liste de logements, la fiche détaillée de chaque logement, une page « À propos » et une page d'erreur 404.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies
 
-## React Compiler
+- **React 19** (composants fonctionnels, hooks)
+- **React Router v7** (routage côté client)
+- **Vite** (build et serveur de développement)
+- **Sass (SCSS)** — approche **mobile-first**
+- **Oxlint** (linter)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Prérequis
 
-## Expanding the Oxlint configuration
+- [Node.js](https://nodejs.org/) (version 18 ou supérieure recommandée)
+- npm (installé avec Node.js)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Installation
+
+```bash
+# Cloner le dépôt
+git clone https://github.com/Loic-87/Kasa-Mon-projet.git
+cd Kasa-Mon-projet
+
+# Installer les dépendances
+npm install
+```
+
+## Lancement
+
+```bash
+# Démarrer le serveur de développement (http://localhost:5173)
+npm start
+
+# Générer la version de production dans /dist
+npm run build
+
+# Prévisualiser la version de production en local
+npm run preview
+
+# Analyser le code avec le linter
+npm run lint
+```
+
+## Structure du projet
+
+```
+public/               Données servies statiquement (accommodations.json)
+src/
+  assets/             Images et logos (SVG, bannières WebP)
+  components/         Composants réutilisables (Banner, Card, Collapse,
+                      Slideshow, Rating, ChevronIcon, Header, Footer, Layout)
+  pages/              Pages (Home, About, Accommodation, Error)
+  hooks/              Hooks personnalisés (useAccommodations, useAccommodation)
+  services/           Couche d'accès aux données (fetch)
+  data/               Contenu statique de la page À propos
+  router/             Configuration des routes
+  styles/             Variables et mixins Sass (breakpoints)
+```
+
+## Choix techniques
+
+- **Approche mobile-first** : les styles de base ciblent le mobile, un mixin `desktop`
+  (breakpoint 768px) ajoute les styles pour les écrans larges.
+- **Couche service** : les données sont récupérées via `fetch` depuis un fichier JSON
+  servi statiquement, dans une couche dédiée (`services/`) prête à être branchée sur
+  une véritable API sans toucher aux composants.
+- **Hooks personnalisés** : la logique de chargement des données est isolée dans des
+  hooks (`useAccommodations`, `useAccommodation`) qui gèrent les états `loading` et
+  `error`, laissant les composants purement présentationnels.
+- **Composants réutilisables** : par exemple `Banner` (avec ou sans titre), `Collapse`
+  (texte ou JSX) ou `ChevronIcon`.
+
+## Auteur
+
+Loïc — Projet OpenClassrooms.
